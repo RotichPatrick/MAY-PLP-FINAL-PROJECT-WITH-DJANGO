@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Services - Upload Documents</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Upload Your Documents</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'upload' %}">Upload Data</a></li>
+                <li><a href="{% url 'map' %}">Map</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Upload and Manage Your Documents</h2>
+            <p>Use this page to upload important documents related to your land, such as deeds, maps, and other legal documents. Our platform ensures that your documents are stored securely and are easily accessible whenever you need them.</p>
+            <h2>Document Security</h2>
+            <p>Your documents are stored securely in our encrypted database, accessible only by you and authorized personnel. We prioritize the privacy and security of your information.</p>
+            <h2>Easy Access</h2>
+            <p>Access your uploaded documents anytime, anywhere. Our platform is designed to be user-friendly, so you can quickly find and manage your documents with ease.</p>
+            <form>
+                <label for="file">Select file to upload:</label>
+                <input type="file" id="file" name="file" required>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Geospatial Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>

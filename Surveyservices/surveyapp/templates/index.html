@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Services - Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Geospatial Services</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'upload' %}">Upload Data</a></li>
+                <li><a href="{% url 'map' %}">Map</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Register</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section>
+            <h2>Your Land, Our Expertise</h2>
+            <p>We provide geospatial and surveying services to help farmers manage their land more effectively. Our platform offers tools to upload documents, view your farm on a map, and connect with local surveyors.</p>
+            <h2>Why Choose Us?</h2>
+            <p>With years of experience in geospatial analysis, we ensure precise and reliable results. Our services are tailored to meet the unique needs of farmers, helping them optimize land usage.</p>
+            <h2>Join Our Community</h2>
+            <p>Become a part of our growing community of farmers who are leveraging technology to improve their land management practices. Discover how our services can benefit you.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Geospatial Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>

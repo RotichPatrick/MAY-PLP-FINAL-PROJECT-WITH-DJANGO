@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Services - Contact Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'upload' %}">Upload Data</a></li>
+                <li><a href="{% url 'map' %}">Map</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'signup' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>Have questions or need assistance? Feel free to reach out to us. Our team is here to help you with any inquiries related to our geospatial and surveying services.</p>
+            <h2>Office Location</h2>
+            <p>We are located in the heart of the agricultural district. Visit us during our working hours for in-person consultations and support. Our address and directions are available below.</p>
+            <h2>Contact Form</h2>
+            <form>

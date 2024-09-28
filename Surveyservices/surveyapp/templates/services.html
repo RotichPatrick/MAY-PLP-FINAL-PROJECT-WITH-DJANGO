@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Services - Services</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'upload' %}">Upload Data</a></li>
+                <li><a href="{% url 'map' %}">Map</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Geospatial Analysis</h2>
+            <p>We offer detailed geospatial analysis to help you understand your land's topography, soil health, and other critical factors. Our tools provide accurate and actionable insights.</p>
+            <h2>Surveying Services</h2>
+            <p>Our team of certified surveyors is ready to assist you with land measurement, boundary mapping, and other surveying needs. We ensure precise and reliable results.</p>
+            <h2>Custom Solutions</h2>
+            <p>We understand that every farm is unique. That's why we offer custom solutions tailored to your specific needs, whether it's mapping, document management, or finding local experts.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Geospatial Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Services - Map</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNZF2AABeBt7o4vEpSL3pQ8Q29LnxKCSQ&callback=initMap" 
+        async defer></script>
+
+    <!-- JavaScript to initialize the map -->
+    <script>
+        function initMap() {
+            // The location you want to center your map on (e.g., a specific farm or a region)
+            var farmLocation = {lat: -1.2921, lng: 36.8219}; // Example coordinates for Nairobi, Kenya
+
+            // Creating the map
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,  // Zoom level (change as needed)
+                center: farmLocation  // Center the map on the farm location
+            });
+
+            // Marker for the farm location
+            var marker = new google.maps.Marker({
+                position: farmLocation,
+                map: map,
+                title: 'Your Farm'
+            });
+        }
+    </script>
+
+    <!-- Additional styling for the map div -->
+    <style>
+        #map {
+            height: 400px;  /* Set the height of the map */
+            width: 100%;  /* Full width of the container */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>View Your Farm on the Map</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'upload' %}">Upload Data</a></li>
+                <li><a href="{% url 'map' %}">Map</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Interactive Mapping</h2>
+            <p>Use our interactive map to view your farm, explore different land features, and analyze your land’s spatial data. Zoom in to see more details, or switch to different map layers for specific information.</p>
+            <!-- The div element for the map -->
+            <div id="map"></div>
+
+            <h2>Geospatial Tools</h2>
+            <p>Our platform includes advanced geospatial tools to help you make informed decisions about land management. These tools are user-friendly and designed to provide actionable insights.</p>
+
+            <h2>Real-Time Updates</h2>
+            <p>Stay informed with real-time updates and data visualization. Our map is constantly updated to reflect the latest changes, ensuring you have the most accurate information at your fingertips.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Geospatial Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
